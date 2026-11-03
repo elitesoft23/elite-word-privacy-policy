@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - EliteWord | English Vocabulary & Spaced Repetition</title>
+  <meta name="description"
+    content="Official Privacy Policy for EliteWord Android Application on Google Play Store. Learn how EliteWord protects your privacy through offline-first local data architecture.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-light: #6366F1;
+      --primary-dark: #3730A3;
+      --accent: #F59E0B;
+      --accent-glow: rgba(245, 158, 11, 0.2);
+      --bg-gradient: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #0F172A 100%);
+      --card-bg: rgba(255, 255, 255, 0.96);
+      --card-border: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --text-light: #F8FAFC;
+      --badge-bg: #EEF2FF;
+      --badge-text: #4338CA;
+      --success: #10B981;
+      --border-radius-lg: 20px;
+      --border-radius-md: 12px;
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 20px 30px -10px rgba(79, 70, 229, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #F8FAFC;
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Hero Banner */
+    .hero-section {
+      background: var(--bg-gradient);
+      color: var(--text-light);
+      padding: 60px 20px 90px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(15, 23, 42, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .app-icon-wrapper {
+      display: inline-block;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .app-icon {
+      width: 110px;
+      height: 110px;
+      border-radius: 26px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 0 4px rgba(255, 255, 255, 0.15);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .app-icon:hover {
+      transform: translateY(-4px) scale(1.02);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #E0E7FF;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .hero-badge svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--success);
+    }
+
+    h1.app-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: #CBD5E1;
+      max-width: 640px;
+      margin: 0 auto 20px;
+      font-weight: 400;
+    }
+
+    .meta-tags {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.88rem;
+      color: #94A3B8;
+      flex-wrap: wrap;
+    }
+
+    .meta-tag-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Main Content Layout */
+    .content-wrapper {
+      max-width: 960px;
+      margin: -40px auto 60px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .policy-container {
+      background: #FFFFFF;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--card-border);
+      padding: 44px;
+    }
+
+    /* Quick Summary Cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .summary-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--border-radius-md);
+      padding: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .summary-card:hover {
+      border-color: var(--primary-light);
+      background: #EEF2FF;
+      transform: translateY(-2px);
+    }
+
+    .summary-card .icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #E0E7FF;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .summary-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .summary-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Section Styles */
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 30px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #F1F5F9;
+    }
+
+    .section-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      color: #334155;
+      font-size: 0.98rem;
+      margin-bottom: 14px;
+    }
+
+    ul,
+    ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.96rem;
+    }
+
+    li strong {
+      color: #0F172A;
+    }
+
+    /* Permission Table */
+    .permission-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 18px 0 24px;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      font-size: 0.92rem;
+    }
+
+    .permission-table th {
+      background: #F1F5F9;
+      color: #334155;
+      font-weight: 700;
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .permission-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: top;
+      color: #334155;
+    }
+
+    .permission-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .permission-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      background: #EEF2FF;
+      color: #4338CA;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    /* Highlight Callout Box */
+    .callout-box {
+      background: #F0FDF4;
+      border-left: 4px solid #22C55E;
+      border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+      padding: 18px 22px;
+      margin: 20px 0;
+    }
+
+    .callout-box.info {
+      background: #EFF6FF;
+      border-left-color: #3B82F6;
+    }
+
+    .callout-box h4 {
+      font-size: 0.96rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #065F46;
+    }
+
+    .callout-box.info h4 {
+      color: #1E40AF;
+    }
+
+    .callout-box p {
+      font-size: 0.91rem;
+      margin: 0;
+      color: #1F2937;
+    }
+
+    /* Contact Box */
+    .contact-card {
+      background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
+      border: 1px solid #C7D2FE;
+      border-radius: var(--border-radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.96rem;
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px 60px;
+      color: #64748B;
+      font-size: 0.88rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Floating Back-to-Top Button */
+    .top-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #FFF;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 99;
+    }
+
+    .top-btn.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .top-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 40px 16px 70px;
+      }
+
+      h1.app-title {
+        font-size: 1.85rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .policy-container {
+        padding: 24px 18px;
+        border-radius: 16px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .permission-table {
+        display: block;
+        overflow-x: auto;
+      }
+
+      .permission-table th,
+      .permission-table td {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Hero Header -->
+  <header class="hero-section">
+    <div class="hero-container">
+      <div class="app-icon-wrapper">
+        <img src="icon.png" alt="EliteWord App Icon" class="app-icon">
+      </div>
+      <!-- <div class="hero-badge">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+        </svg>
+        Google Play Console Verified
+      </div> -->
+      <h1 class="app-title">EliteWord Privacy Policy</h1>
+      <p class="hero-subtitle">Learn Vocabulary With Every Unlock • Interactive Spaced Repetition Flashcards &
+        Home-Screen Widgets</p>
+      <div class="meta-tags">
+        <div class="meta-tag-item">
+          <strong>Developer:</strong> EliteSoft23
+        </div>
+        <div class="meta-tag-item">
+          <strong>Package:</strong> com.elitesoft23.eliteword
+        </div>
+        <div class="meta-tag-item">
+          <strong>Effective Date:</strong> November 3, 2026
+        </div>
+        <div class="meta-tag-item">
+          <strong>Policy Version:</strong> 2.0 (Offline-First)
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <main class="content-wrapper">
+    <article class="policy-container">
+
+      <!-- Executive Privacy Summary -->
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="icon-box">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+            </svg>
+          </div>
+          <h4>100% Offline-First</h4>
+          <p>Your vocabulary, custom decks, study progress, and memory intervals stay exclusively on your device.</p>
+        </div>
+
+        <div class="summary-card">
+          <div class="icon-box">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+            </svg>
+          </div>
+          <h4>Zero Data Collection</h4>
+          <p>We do not collect names, emails, phone numbers, IP addresses, GPS location, or device identifiers.</p>
+        </div>
+
+        <div class="summary-card">
+          <div class="icon-box">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+            </svg>
+          </div>
+          <h4>No Ads & No Tracking</h4>
+          <p>No third-party ad networks, no tracking beacons, no analytics brokers, and no data sales—ever.</p>
+        </div>
+
+        <div class="summary-card">
+          <div class="icon-box">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+            </svg>
+          </div>
+          <h4>Full User Ownership</h4>
+          <p>You have full control to add, edit, backup, or wipe all learning data directly within the app anytime.</p>
+        </div>
+      </div>
+
+      <!-- 1. Introduction -->
+      <section id="introduction">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2>Introduction & Purpose</h2>
+        </div>
+        <p>
+          Welcome to <strong>EliteWord</strong> ("the Application", "we", "our", or "us"), developed and published by
+          <strong>EliteSoft23</strong>. EliteWord is engineered to help language learners, students, and competitive
+          exam candidates (such as IELTS, GRE, BCS, UPSC, SAT, and Higher Studies) master English vocabulary through
+          scientifically proven spaced repetition, interactive lockscreen flashcards, and Android home-screen
+          AppWidgets.
+        </p>
+        <p>
+          We firmly believe that education tools should strictly respect and preserve learner privacy. This Privacy
+          Policy informs users regarding our strict policies with the collection, use, disclosure, and protection of
+          information when using the EliteWord Android app available on the Google Play Store.
+        </p>
+      </section>
+
+      <!-- 2. Information Collection and Storage -->
+      <section id="data-collection">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2>Information Collection & Offline-First Storage</h2>
+        </div>
+        <p>
+          EliteWord is intentionally architected as a <strong>completely offline-first application</strong>.
+        </p>
+        <ul>
+          <li><strong>No Personal Identifiable Information (PII):</strong> We do not ask for or collect your personal
+            name, email address, password, phone number, physical address, or national identifiers. No account
+            registration or sign-in is required to use all features of EliteWord.</li>
+          <li><strong>No Cloud Data Transmission:</strong> The application does not send your study records, bookmarks,
+            quiz scores, or custom word lists to any remote server or external database.</li>
+          <li><strong>Local Database Engine:</strong> All vocabulary entries, flashcard review intervals (repetitions,
+            ease factors, interval days), focus sessions, active day streaks, and user-created custom decks are stored
+            securely on your device’s local sandboxed SQLite storage powered by Drift.</li>
+        </ul>
+
+        <div class="callout-box">
+          <h4>Privacy Guarantee</h4>
+          <p>Your learning history and personal flashcards belong solely to you. If you uninstall the app or clear app
+            data via Android Settings, all locally stored study progress and custom words are completely deleted from
+            the device.</p>
+        </div>
+      </section>
+
+      <!-- 3. Android Permissions & Justification -->
+      <section id="permissions">
+        <div class="section-header">
+          <span class="section-number">03</span>
+          <h2>Android System Permissions & Justification</h2>
+        </div>
+        <p>
+          In accordance with Google Play Developer Policy requirements, EliteWord requests only the minimum set of
+          permissions necessary to deliver its core passive learning features (Lockscreen Live Wallpaper and Home-Screen
+          AppWidgets). Below is a transparent breakdown of every permission declared in our manifest:
+        </p>
+
+        <table class="permission-table">
+          <thead>
+            <tr>
+              <th style="width: 32%;">Permission Name</th>
+              <th style="width: 20%;">Type</th>
+              <th>Specific Purpose in EliteWord</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="permission-code">SET_WALLPAPER</span><br><span
+                  class="permission-code">SET_WALLPAPER_HINTS</span></td>
+              <td>Wallpaper API</td>
+              <td>Allows users to set automated lockscreen or home-screen vocabulary cards using the built-in Live
+                Wallpaper Service (<code>VocabWallpaperService</code>).</td>
+            </tr>
+            <tr>
+              <td><span class="permission-code">POST_NOTIFICATIONS</span></td>
+              <td>Notification</td>
+              <td>Used only on Android 13+ (API 33+) to dispatch scheduled local spaced repetition review reminders. No
+                remote advertising or promotional push messages are sent.</td>
+            </tr>
+            <tr>
+              <td><span class="permission-code">FOREGROUND_SERVICE</span></td>
+              <td>System Service</td>
+              <td>Required by the Android operating system to power the background lockscreen wallpaper rendering
+                service smoothly.</td>
+            </tr>
+            <tr>
+              <td><span class="permission-code">RECEIVE_BOOT_COMPLETED</span></td>
+              <td>Device Lifecycle</td>
+              <td>Allows Android WorkManager to re-register the periodic vocabulary rotation schedule when your
+                smartphone restarts.</td>
+            </tr>
+            <tr>
+              <td><span class="permission-code">WAKE_LOCK</span></td>
+              <td>Battery Optimization</td>
+              <td>Ensures short background calculation tasks finish cleanly when updating scheduled home-screen widget
+                words.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout-box info">
+          <h4>No Sensitive Runtime Permissions</h4>
+          <p>EliteWord never requests runtime access to your Camera, Microphone, GPS Location, Contacts, SMS, Call Logs,
+            or External Photo Gallery.</p>
+        </div>
+      </section>
+
+      <!-- 4. Text-To-Speech & Pronunciation -->
+      <section id="tts">
+        <div class="section-header">
+          <span class="section-number">04</span>
+          <h2>Text-To-Speech (TTS) & Audio Pronunciation</h2>
+        </div>
+        <p>
+          EliteWord provides natural audio pronunciation for vocabulary terms across app screens and home-screen
+          widgets. This feature utilizes the <strong>device's native Android Text-To-Speech (TTS) engine</strong> (such
+          as Google Speech Services or your phone manufacturer's default engine).
+        </p>
+        <p>
+          Audio generation runs locally on-device. EliteWord does not record your voice, nor does it transmit spoken
+          audio over the internet.
+        </p>
+      </section>
+
+      <!-- 5. Third-Party Services & Analytics -->
+      <section id="third-party">
+        <div class="section-header">
+          <span class="section-number">05</span>
+          <h2>Third-Party Services & SDKs</h2>
+        </div>
+        <p>
+          Unlike many mobile applications, EliteWord maintains a clean, tracker-free environment:
+        </p>
+        <ul>
+          <li><strong>No Advertising Networks:</strong> We do not integrate Google AdMob, Unity Ads, AppLovin, or any
+            third-party advertising SDKs.</li>
+          <li><strong>No Identity Trackers:</strong> We do not integrate Facebook SDK, AppsFlyer, Adjust, or user
+            profiling trackers.</li>
+          <li><strong>No Data Brokering:</strong> We never sell, rent, monetize, or trade any user information to data
+            brokers or marketing affiliates.</li>
+        </ul>
+      </section>
+
+      <!-- 6. Children's Privacy (COPPA & GDPR-K) -->
+      <section id="children-privacy">
+        <div class="section-header">
+          <span class="section-number">06</span>
+          <h2>Children's Privacy (COPPA & GDPR Compliance)</h2>
+        </div>
+        <p>
+          EliteWord is a general audience educational vocabulary application suitable for learners of all ages,
+          including high school and university students.
+        </p>
+        <p>
+          We do not knowingly collect, request, or solicit any personal information from children under the age of 13
+          (or 16 in the European Union). Because our application does not collect personal identifiers, no child's
+          personal data is ever recorded, stored, or processed on external servers. If a parent or guardian has
+          questions about child safety in our educational tools, please contact us immediately.
+        </p>
+      </section>
+
+      <!-- 7. Security of Your Data -->
+      <section id="security">
+        <div class="section-header">
+          <span class="section-number">07</span>
+          <h2>Data Security & Safeguards</h2>
+        </div>
+        <p>
+          We value your trust in using EliteWord. Because all user progress and study data are stored exclusively in the
+          private, sandboxed app directory of your Android device, operating system-level sandboxing prevents other
+          applications from accessing EliteWord's local database.
+        </p>
+        <p>
+          In addition, built-in lexicon assets are protected using dynamic native C++ NDK machine-level validation to
+          prevent unauthorized tampering or injection.
+        </p>
+      </section>
+
+      <!-- 8. User Rights & Data Deletion -->
+      <section id="user-rights">
+        <div class="section-header">
+          <span class="section-number">08</span>
+          <h2>User Rights & Complete Data Deletion</h2>
+        </div>
+        <p>
+          Under international privacy standards (including GDPR, CCPA, and Google Play User Data policies), you retain
+          full sovereignty over your data:
+        </p>
+        <ul>
+          <li><strong>Right to Access & Edit:</strong> You can view, edit, or delete any custom word, deck, or study
+            bookmark directly within the app interface at any time.</li>
+          <li><strong>Right to Erase:</strong> You can instantly wipe all local data by going to <em>Android Settings
+              &gt; Apps &gt; EliteWord &gt; Storage &gt; Clear Storage / Clear Data</em>, or by simply uninstalling the
+            application.</li>
+          <li><strong>No Lingering Traces:</strong> Since no server accounts exist, clearing local data or uninstalling
+            the app permanently purges all traces of your study history.</li>
+        </ul>
+      </section>
+
+      <!-- 9. Changes to This Privacy Policy -->
+      <section id="policy-updates">
+        <div class="section-header">
+          <span class="section-number">09</span>
+          <h2>Changes to This Privacy Policy</h2>
+        </div>
+        <p>
+          We may update our Privacy Policy periodically to reflect app updates, new feature rollouts, or evolving legal
+          and Google Play Developer guidelines. Any updates will be published on this page with an updated "Effective
+          Date" at the top of the policy.
+        </p>
+        <p>
+          We encourage users to review this page periodically for any changes. Continued use of EliteWord following the
+          posting of updates constitutes acceptance of the revised policy.
+        </p>
+      </section>
+
+      <!-- 10. Developer Contact Information -->
+      <section id="contact">
+        <div class="section-header">
+          <span class="section-number">10</span>
+          <h2>Contact Developer</h2>
+        </div>
+        <p>
+          If you have any questions, suggestions, or concerns regarding this Privacy Policy or the security practices of
+          EliteWord, please contact the developer team at:
+        </p>
+
+        <div class="contact-card">
+          <div class="contact-item">
+            <strong>Developer / Publisher:</strong> EliteSoft23
+          </div>
+          <div class="contact-item">
+            <strong>Application:</strong> EliteWord: English Vocabulary & Spaced Repetition
+          </div>
+          <div class="contact-item">
+            <strong>Package Name:</strong> <code>com.elitesoft23.eliteword</code>
+          </div>
+          <div class="contact-item">
+            <strong>Support Email:</strong> <a href="mailto:elitesoft23@gmail.com">elitesoft23@gmail.com</a>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 EliteSoft23. All rights reserved.</p>
+    <p style="margin-top: 6px; font-size: 0.82rem;">EliteWord &bull; Designed for Serious Vocabulary Mastery &bull;
+      Safe, Private & Offline</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="top-btn" id="topBtn" aria-label="Back to top">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+    </svg>
+  </button>
+
+  <script>
+    // Back to top floating button logic
+    const topBtn = document.getElementById('topBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        topBtn.classList.add('visible');
+      } else {
+        topBtn.classList.remove('visible');
+      }
+    });
+
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+
+</html>
